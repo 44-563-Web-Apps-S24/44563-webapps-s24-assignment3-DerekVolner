@@ -47,4 +47,20 @@
         <td>Cary Fukunaga and Nic Pizzolatto</td>
     </tr>
 </table>
+<hr>
+<h4>Snippet Code Display</h4>
+    <p>Brief summary of code snippet: Python Singleton decorator, this allows us to create a singleton class to create a class that only has one global concurrent instance that due to the decorator allows us to modify and extend it's behaviors. </p>
+    <pre>def singleton(myClass):
+        instances = {}
+        def getInstance(*args, **kwargs):
+            if myClass not in instances:
+                instances[myClass] = myClass(*args, **kwargs)
+            return instances[myClass]
+        return getInstance
+    
+    @singleton
+    class TestClass(object):
+        pass 
+    </pre>
+    <a href="https://code.pieces.app/collections/python">Python Singleton decorator</a>
 </body>
